@@ -18,8 +18,12 @@ function Flower() {
     color: centerColor
   };
 
+  const handleClick = () => {
+    alert(`אני פרח מסוג ${flowerName}`);
+  };
+
   return (
-    <div className="flower-container">
+    <div className="flower-container" onClick={handleClick} style={{ cursor: 'pointer' }}>
       <div className="flower-shape">
         <div className="flower-center" style={centerStyle}></div>
         <div className="petal petal-top" style={petalStyle}></div>
