@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Flower() {
+  function Flower() {
   const flowerName = "ורד";
   const petalColor = "lightpink";
   const centerColor = "darkred";
 
   const flowerStyle = {
-    backgroundColor: "lightpink",
-    color: "darkred",
+    backgroundColor: petalColor,
+    color: centerColor,
     padding: '20px',
     margin: '10px',
     borderRadius: '10px',
