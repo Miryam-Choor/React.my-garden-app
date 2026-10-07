@@ -5,9 +5,15 @@ import Flower from './Flower/Flower';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
-      <Flower />
+      
+      {/* שליחת ה-props לקומפוננטת Flower */}
+      <Flower 
+        name="ורד" 
+        petalColor="pink" 
+        centerColor="darkred" 
+      />
     </div>
   );
 }

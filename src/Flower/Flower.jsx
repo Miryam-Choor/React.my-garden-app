@@ -1,10 +1,7 @@
 import React from 'react';
-import './Flower.css'
+import './Flower.css';
 
-function Flower() {
-  const flowerName = "ורד";
-  const petalColor = "pink";
-  const centerColor = "darkred";
+function Flower({ name, petalColor, centerColor }) {
 
   const petalStyle = {
     backgroundColor: petalColor
@@ -19,7 +16,7 @@ function Flower() {
   };
 
   const handleClick = () => {
-    alert(`אני פרח מסוג ${flowerName}`);
+    alert(`אני פרח מסוג ${name}`);
   };
 
   return (
@@ -33,11 +30,10 @@ function Flower() {
       </div>
 
       <div className="flower-name" style={nameStyle}>
-        {flowerName}
+        {name}
       </div>
     </div>
   );
 }
-
 
 export default Flower;
