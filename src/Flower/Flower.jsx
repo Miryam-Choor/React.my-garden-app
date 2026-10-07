@@ -2,17 +2,19 @@ import React from 'react';
 import './Flower.css';
 
 function Flower({ name, petalColor, centerColor }) {
+  const currentPetalColor = petalColor || "lightgreen";
+  const currentCenterColor = centerColor || "orange";
 
   const petalStyle = {
-    backgroundColor: petalColor
+    backgroundColor: currentPetalColor
   };
 
   const centerStyle = {
-    backgroundColor: centerColor
+    backgroundColor: currentCenterColor
   };
 
   const nameStyle = {
-    color: centerColor
+    color: currentCenterColor
   };
 
   const handleClick = () => {

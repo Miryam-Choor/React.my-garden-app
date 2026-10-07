@@ -8,11 +8,28 @@ function App() {
     <div className="App">
       <Header />
       
-      {/* שליחת ה-props לקומפוננטת Flower */}
       <Flower 
         name="ורד" 
         petalColor="pink" 
         centerColor="darkred" 
+      />
+
+      {/*בדיקות לברירת מחדל*/}
+      {/*בלי צבע מרכז*/}
+      <Flower 
+        name="חמניה" 
+        petalColor="yellow" 
+      />
+
+      {/*בלי עלי כותרת*/}
+      <Flower 
+        name="כלנית" 
+        centerColor="black" 
+      />
+
+      {/*רק שם*/}
+      <Flower 
+        name="יסמין" 
       />
     </div>
   );
