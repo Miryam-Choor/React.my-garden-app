@@ -1,28 +1,39 @@
 import React from 'react';
+import './Flower.css'
 
-  function Flower() {
+function Flower() {
   const flowerName = "ורד";
-  const petalColor = "lightpink";
+  const petalColor = "pink";
   const centerColor = "darkred";
 
-  const flowerStyle = {
-    backgroundColor: petalColor,
-    color: centerColor,
-    padding: '20px',
-    margin: '10px',
-    borderRadius: '10px',
-    display: 'inline-block',
-    textAlign: 'center',
-    fontFamily: 'Arial, sans-serif'
+  const petalStyle = {
+    backgroundColor: petalColor
+  };
+
+  const centerStyle = {
+    backgroundColor: centerColor
+  };
+
+  const nameStyle = {
+    color: centerColor
   };
 
   return (
-    <div style={flowerStyle}>
-      <h3>{flowerName}</h3>
-      <p>צבע עלי כותרת: {petalColor}</p>
-      <p>צבע מרכזי: {centerColor}</p>
+    <div className="flower-container">
+      <div className="flower-shape">
+        <div className="flower-center" style={centerStyle}></div>
+        <div className="petal petal-top" style={petalStyle}></div>
+        <div className="petal petal-bottom" style={petalStyle}></div>
+        <div className="petal petal-left" style={petalStyle}></div>
+        <div className="petal petal-right" style={petalStyle}></div>
+      </div>
+
+      <div className="flower-name" style={nameStyle}>
+        {flowerName}
+      </div>
     </div>
   );
 }
+
 
 export default Flower;
