@@ -4,33 +4,26 @@ import Header from './Header/Header';
 import Flower from './Flower/Flower';
 
 function App() {
+
+  const flowersList = [
+    { id: 1, name: "ורד", petalColor: "pink", centerColor: "darkred" },
+    { id: 2, name: "חמניה", petalColor: "yellow" },
+    { id: 3, name: "כלנית", centerColor: "black" },
+    { id: 4, name: "יסמין" }
+  ];
+
   return (
     <div className="App">
       <Header />
       
-      <Flower 
-        name="ורד" 
-        petalColor="pink" 
-        centerColor="darkred" 
-      />
-
-      {/*בדיקות לברירת מחדל*/}
-      {/*בלי צבע מרכז*/}
-      <Flower 
-        name="חמניה" 
-        petalColor="yellow" 
-      />
-
-      {/*בלי עלי כותרת*/}
-      <Flower 
-        name="כלנית" 
-        centerColor="black" 
-      />
-
-      {/*רק שם*/}
-      <Flower 
-        name="יסמין" 
-      />
+      {flowersList.map((flower) => (
+        <Flower 
+          key={flower.id} 
+          name={flower.name} 
+          petalColor={flower.petalColor} 
+          centerColor={flower.centerColor} 
+        />
+      ))}
     </div>
   );
 }
